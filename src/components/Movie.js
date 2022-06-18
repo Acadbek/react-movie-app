@@ -1,5 +1,6 @@
 
 export default function Movie(props) {
+  // eslint-disable-next-line no-unused-vars
   const { Title, Year, imdbID, Type, Poster } = props;
   return (
     <div className="card movie">

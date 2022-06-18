@@ -17,7 +17,7 @@ export default class Main extends React.Component {
 			<div className="container content">
 				{this.state.movies.length ?
 					<Movies movies={this.state.movies} /> :
-					<h1>Loading...</h1>}
+					<h5>Loading...</h5>}
 			</div>
 		)
 	}
