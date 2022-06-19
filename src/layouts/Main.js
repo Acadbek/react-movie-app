@@ -1,5 +1,7 @@
 import React from "react";
+import Loader from "../components/Loader";
 import Movies from "../components/Movies";
+import Search from "../components/Search";
 
 export default class Main extends React.Component {
 	state = {
@@ -15,9 +17,10 @@ export default class Main extends React.Component {
 	render() {
 		return (
 			<div className="container content">
+				<Search/>
 				{this.state.movies.length ?
 					<Movies movies={this.state.movies} /> :
-					<h5>Loading...</h5>}
+					<Loader/>}
 			</div>
 		)
 	}
