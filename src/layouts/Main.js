@@ -14,13 +14,19 @@ export default class Main extends React.Component {
 			.then(data => this.setState({ movies: data.Search }))
 	}
 
+	seachMovies = (mv, type = 'all') => { 
+		fetch(`http://www.omdbapi.com/?apikey=329ffa13&s=${mv}${type !== 'all' ? `&type=${type}` : ''}`)
+			.then((res) => res.json())
+			.then(data => this.setState({ movies: data.Search }))
+	}
+
 	render() {
 		return (
 			<div className="container content">
-				<Search/>
+				<Search searchMovie={this.seachMovies} />
 				{this.state.movies.length ?
 					<Movies movies={this.state.movies} /> :
-					<Loader/>}
+					<Loader />}
 			</div>
 		)
 	}
