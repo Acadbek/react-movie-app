@@ -16,7 +16,7 @@ function Navbar() {
       <div className="overlay"></div>
       <Swiper
         onSlideChange={() => console.log("slide change")}
-        spaceBetween={30}
+        spaceBetween={20}
         effect={"fade"}
         navigation={true}
         pagination={{
