@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Card = () => {
   return (
-    <div>
-      
+    <div className="hero-pattern">
+      ajsdjabsd askdjjnnadskj asdjb
     </div>
   );
-}
+};
 
 export default Card;
