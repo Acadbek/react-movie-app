@@ -4,6 +4,7 @@ import Discount from "../Pages/Discount/Discount";
 import InnerTurizm from "../Pages/InnerTurizm/InnerTurizm";
 import OuterTurizm from "../Pages/OuterTurizm/OuterTurizm";
 import Home from "../Home/Home";
+import Turizm from "../Pages/Turizm";
 
 const Routess = () => {
   return (
