@@ -1,5 +1,4 @@
 import React from "react";
-import background from "../../assets/photos/card1.jpg";
 import ReactStars from "react-rating-stars-component";
 
 const Card = (props) => {
@@ -29,7 +28,7 @@ const Card = (props) => {
         <p className="text-[22px] font-bold text-[#223645] uppercase leading-6 mt-2">
           {props.title}
         </p>
-        {props.showCost ? (
+        {props.showPrice ? (
           <p className="text-[15px] text-[#626672] font-normal mt-2">
             10 920 so'm / $1
           </p>
