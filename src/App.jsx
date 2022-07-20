@@ -1,7 +1,9 @@
 import { Container } from "./main-styles/styles";
 import Card from "./components/card";
 import Navbar from "./components/navbar";
+import PackageCard from "./components/package-card";
 import background from "./assets/photos/card1.jpg";
+import backgroundPackage from "./assets/photos/sydney.jpg";
 
 function App() {
   const array = [
@@ -21,19 +23,63 @@ function App() {
       title: "dengiz bo'ylari va manzaralari",
     },
   ];
+  const data = [
+    {
+      img: backgroundPackage,
+      package: 'Contact us 12%',
+      day: '8 day',
+      location: 'Samarqand',
+      title: 'TOUR TO SATORINI',
+      desc: 'Malesuada incidunt excepturi proident quo eros? Id interd...',
+      price: "Price: 16,653,000 so'm or $1525 $1255"
+    },
+    {
+      img: backgroundPackage,
+      package: 'Contact us 12%',
+      day: '8 day',
+      location: 'Samarqand',
+      title: 'TOUR TO SATORINI',
+      desc: 'Malesuada incidunt excepturi proident quo eros? Id interd...',
+      price: "Price: 16,653,000 so'm or $1525 $1255"
+    },
+    {
+      img: backgroundPackage,
+      package: 'Contact us 12%',
+      day: '8 day',
+      location: 'Samarqand',
+      title: 'TOUR TO SATORINI',
+      desc: 'Malesuada incidunt excepturi proident quo eros? Id interd...',
+      price: "Price: 16,653,000 so'm or $1525 $1255"
+    },
+  ]
   return (
     <div>
       <Navbar />
-      <Container className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
-        {array.map((item) => (
-          <div>
-            <Card
-              background={item.img}
-              location={item.location}
-              title={item.title}
-            />
-          </div>
-        ))}
+      <Container>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
+          {array.map((item) => (
+            <div>
+              <Card
+                background={item.img}
+                location={item.location}
+                title={item.title}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-2 gap-8">
+          {data.map((item) => (
+              <PackageCard className="col-span-6"
+                background={item.img}
+                package={item.package}
+                day={item.day}
+                location={item.location}
+                title={item.title}
+                desc={item.desc}
+                price={item.price}
+              />
+          ))}
+        </div>
       </Container>
     </div>
   );
