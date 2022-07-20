@@ -1,10 +1,16 @@
-import Navbar from './components/navbar'
+import Main from "./Layout/Main";
+import Routess from "./Router/Routess";
+import { GlobalStyle } from "./styles/GlobalStyle.styled";
 
 function App() {
   return (
-    <div>
-      <Navbar/>
-    </div>
+    <>
+      <Main>
+        <GlobalStyle>
+          <Routess />
+        </GlobalStyle>
+      </Main>
+    </>
   );
 }
 
