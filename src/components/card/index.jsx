@@ -29,6 +29,13 @@ const Card = (props) => {
         <p className="text-[22px] font-bold text-[#223645] uppercase leading-6 mt-2">
           {props.title}
         </p>
+        {props.showCost ? (
+          <p className="text-[15px] text-[#626672] font-normal mt-2">
+            10 920 so'm / $1
+          </p>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
