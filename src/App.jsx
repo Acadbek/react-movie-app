@@ -24,9 +24,9 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Container className="grid grid-cols-12 gap-12">
+      <Container className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
         {array.map((item) => (
-          <div className="col-span-4">
+          <div>
             <Card
               background={item.img}
               location={item.location}
