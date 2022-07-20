@@ -44,20 +44,20 @@ const Discount = () => {
         </GlobalContainer>
       </InnerAndOuterContainer>
       <GlobalContainer>
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 md:gap-8 mt-[95px] mb-[95px]">
-        {data.map((item) => (
-          <PackageCard
-            className="col-span-6"
-            background={item.img}
-            package={item.package}
-            day={item.day}
-            location={item.location}
-            title={item.title}
-            desc={item.desc}
-            price={item.price}
-          />
-        ))}
-      </div>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 md:gap-8 mt-[95px] mb-[95px]">
+          {data.map((item) => (
+            <PackageCard
+              className="col-span-6"
+              background={item.img}
+              package={item.package}
+              day={item.day}
+              location={item.location}
+              title={item.title}
+              desc={item.desc}
+              price={item.price}
+            />
+          ))}
+        </div>
       </GlobalContainer>
     </div>
   );
