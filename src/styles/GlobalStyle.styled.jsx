@@ -1,31 +1,6 @@
 import styled from "styled-components";
 
-export const GlobalStyle = styled.div`
-  body {
-    background: red;
-    font-family: "Montserrat", sans-serif;
-  }
-
-  html,
-  body {
-    margin: 0px;
-    height: 100%;
-  }
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #000;
-  }
-`;
+export const GlobalStyle = styled.div``;
 
 export const GlobalContainer = styled.div`
   max-width: 1170px;

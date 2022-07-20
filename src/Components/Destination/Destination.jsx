@@ -1,78 +1,44 @@
 import React from "react";
-import {
-  DestinationItem,
-  DestinationItemChild,
-  DestinationRow,
-} from "./DestinationStyle";
+import background from "../../assets/photo/card.jpg";
+import ReactStars from "react-rating-stars-component";
 
-const Destination = () => {
-  let destination = [
-    {
-      image:
-        "	http://www.xondoppitravel.com/frontend/web/images/producton/gallery/2/2/medium.jpg?_=14115744",
-      countryName: "SAUDIYA ARABISTONi",
-      title: "SAUDIYA ARABISTONIDAGI MANZARALAR",
-      price: "10 920 so'm / $1",
-      rating: "* * * * *",
-    },
-    {
-      image:
-        "	http://www.xondoppitravel.com/frontend/web/images/producton/gallery/3/28/medium.jpg?_=2949448056      ",
-      countryName: "Misr",
-      title: "QADIMIY YODGORLIKLAR",
-      price: "10 920 000 so'm / $1000",
-      rating: "* * * *",
-    },
-    {
-      image:
-        "	http://www.xondoppitravel.com/frontend/web/images/producton/gallery/4/32/medium.jpg?_=2765882161      ",
-      countryName: "GAVAYI OROLLARI",
-      title: "DENGIZ BO'YLARI VA MANZARALAR",
-      price: "21 840 000 so'm / $2000",
-      rating: "* * * ",
-    },
-    {
-      image: "	 ",
-      countryName: "DUBAI",
-      title: "HUSHMANZARA JOYLAR",
-      price: "5 460 000 so'm / $500",
-      rating: "* * * * *",
-    },
-  ];
+const Card = (props) => {
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+  };
   return (
-    <DestinationRow>
-      {destination.map((item, index) => (
-        <DestinationItem
-          key={index}
-          style={{
-            backgroundImage: `url(${item.image})`,
-          }}
-        >
-          <DestinationItemChild>
-            <div className="rating_star">
-              <i>{item.rating}</i>
-            </div>
-            <span
-              style={{
-                color: "#0085BA",
-                fontSize: "13px",
-                textTransform: "uppercase",
-                fontWeight: "500",
-                display: "block",
-              }}
-            >
-              {item.countryName}
-            </span>
-            <h3>
-              {" "}
-              <a href="#">{item.title}</a>
-            </h3>
-            <p>{item.price}</p>
-          </DestinationItemChild>
-        </DestinationItem>
-      ))}
-    </DestinationRow>
+    <div
+      style={{
+        backgroundImage: `url(${props.background})`,
+        backgroundRepeat: "no-repeat",
+        objectFit: "cover",
+      }}
+      className="w-full rounded-3xl p-6 min-h-[425px] relative"
+    >
+      <div className="relative px-5 py-6 bg-white w-full rounded-3xl mt-[100%]">
+        <div className="absolute top-[-15px] flex items-center justify-center right-[20px] w-[124px] h-[33px] bg-[#3A78C9] rounded-3xl">
+          <ReactStars
+            count={5}
+            size={22}
+            isHalf={true}
+            onChange={ratingChanged}
+            activeColor="#ffd700"
+          />
+        </div>
+        <p className="text-[#0085BA] text-[13px] uppercase">{props.location}</p>
+        <p className="text-[22px] font-bold text-[#223645] uppercase leading-6 mt-2">
+          {props.title}
+        </p>
+        {props.showPrice ? (
+          <p className="text-[15px] text-[#626672] font-normal mt-2">
+            10 920 so'm / $1
+          </p>
+        ) : (
+          <></>
+        )}
+      </div>
+    </div>
   );
 };
 
-export default Destination;
+export default Card;
