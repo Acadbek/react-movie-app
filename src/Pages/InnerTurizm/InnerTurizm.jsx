@@ -1,4 +1,5 @@
 import React from "react";
+import Package from "../../Components/Package/Package";
 import {
   GlobalContainer,
   InnerAndOuterContainer,
@@ -6,9 +7,15 @@ import {
 
 const InnerTurizm = () => {
   return (
-    <InnerAndOuterContainer>
-      <GlobalContainer><h1>TUR PAKETLAR</h1></GlobalContainer>
-    </InnerAndOuterContainer>
+    <>
+      <InnerAndOuterContainer>
+        <GlobalContainer>
+          <h1>TUR PAKETLAR</h1>
+        </GlobalContainer>
+      </InnerAndOuterContainer>
+      <GlobalContainer>
+      </GlobalContainer>
+    </>
   );
 };
 
