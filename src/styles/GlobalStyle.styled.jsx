@@ -18,6 +18,8 @@ export const TopNavbar = styled.div`
   background-color: transparent;
   width: 100%;
   z-index: 99;
+  border-bottom: 1px solid rgba(167, 167, 167, 0.25);
+  padding: 10px 0;
 `;
 
 export const BottomNavbar = styled.div`
@@ -53,7 +55,7 @@ export const FooterContainer = styled.div`
   left: 50%;
   bottom: 0; */
   width: 100%;
-  height: 335px;
+  height: 425px;
   padding-top: 80px;
   background-color: #263a49;
   z-index: 99 !important;

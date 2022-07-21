@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { UpperFooter } from "../styles/FooterStyle";
 import { FooterContainer, GlobalContainer } from "../styles/GlobalStyle.styled";
 
@@ -31,12 +32,23 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-3">
               <aside className="widget">
-                <h3 className="widget-title">Buyurtma Berish</h3>
-                <ul>
-                  <li>tashqi turizm</li>
-                  <li>ichki turizm</li>
-                  <li>Chegirma</li>
-                  <li>Aloqa</li>
+                <div className="footer_bottom_line">
+                  <h3 className="widget-title">Buyurtma Berish </h3>
+                  <p className="line"></p>
+                </div>
+                <ul className="ul_items">
+                  <li>
+                    <Link to="/outerTurizm">tashqi turizm</Link>
+                  </li>
+                  <li>
+                    <Link to="/innerTurizm">ichki turizm</Link>
+                  </li>
+                  <li>
+                    <Link to="/discount">Chegirma</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact">Aloqa</Link>
+                  </li>
                 </ul>
               </aside>
             </div>
@@ -44,7 +56,10 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-3">
               <aside className="widget">
-                <h3 className="widget-title">BIZ BILAN ALOQA</h3>
+                <div className="footer_bottom_line">
+                  <h3 className="widget-title">BIZ BILAN ALOQA </h3>
+                  <p className="line"></p>
+                </div>
                 <ul>
                   <li>
                     Bemalol bog'laning va bizga yetib boring!! va shunga harakat
@@ -52,21 +67,20 @@ const Footer = () => {
                   </li>
                   <li>
                     <i>T</i>
-                    <a href="tel:+998-90-531-34-13"> +998-90-531-34-13</a>
+                    <a className="phoneNum" href="tel:+998-90-531-34-13">
+                      {" "}
+                      +998-90-531-34-13
+                    </a>
                   </li>
                   <li>
                     <i>T</i>
-                    <a href="tel:+998-90-531-34-13">
-                      {" "}
+                    <a className="phoneNum" href="#">
                       xondoppi.travel@gmail.com
                     </a>
                   </li>
                   <li>
                     <i>T</i>
-                    <a href="tel:+998-90-531-34-13">
-                      {" "}
-                      3146 Koontz, Kaliforniya
-                    </a>
+                    3146 Koontz, Kaliforniya
                   </li>
                 </ul>
               </aside>
@@ -75,7 +89,10 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-3">
               <aside className="widget">
-                <h3 className="widget-title">GALAREYA</h3>
+                <div className="footer_bottom_line">
+                  <h3 className="widget-title">GALERIYA </h3>
+                  <p className="line"></p>
+                </div>
                 <ul>
                   <li>tashqi turizm</li>
                   <li>ichki turizm</li>
