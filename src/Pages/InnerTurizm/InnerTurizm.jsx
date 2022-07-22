@@ -1,4 +1,5 @@
 import React from "react";
+import Package from "../../Components/package/Package";
 import SecondCard from "../../Components/SecondCard";
 import {
   GlobalContainer,

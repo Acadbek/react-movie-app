@@ -51,14 +51,40 @@ export const InnerAndOuterContainer = styled.div`
 `;
 
 export const FooterContainer = styled.div`
-  /* transform: translate(-50.09%, 0); */
-  /* position: absolute;
-  left: 50%;
-  bottom: 0; */
   width: 100%;
   height: 425px;
   padding-top: 80px;
   background-color: #263a49;
   z-index: 99 !important;
   border-top: 1px solid #565050;
+`;
+
+export const TextWrap = styled.div`
+margin:50px 0 ;
+  text-align: center;
+  h6 {
+    color: #3a78c9;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0 0 15px;
+    line-height: 1.2;
+    color: #223645;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #626672;
+    max-width: 750px;
+    margin: 0 auto;
+  }
 `;

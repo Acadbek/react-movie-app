@@ -1,4 +1,4 @@
-import { ButtonOuter } from "./ButtonOutLinedStyle";
+import { Btn, ButtonOuter } from "./ButtonOutLinedStyle";
 
 const ButtonOutLined = ({ children }) => {
   return (
