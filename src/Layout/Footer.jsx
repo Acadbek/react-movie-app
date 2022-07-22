@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ImagerView from "../Components/Imager/Imager";
 import { UpperFooter } from "../styles/FooterStyle";
 import { FooterContainer, GlobalContainer } from "../styles/GlobalStyle.styled";
 
@@ -94,10 +95,7 @@ const Footer = () => {
                   <p className="line"></p>
                 </div>
                 <ul>
-                  <li>tashqi turizm</li>
-                  <li>ichki turizm</li>
-                  <li>Chegirma</li>
-                  <li>Aloqa</li>
+                  <ImagerView />
                 </ul>
               </aside>
             </div>
