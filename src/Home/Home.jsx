@@ -1,4 +1,6 @@
 import React from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import {
   ButtonWrapper,
   Header,
@@ -7,8 +9,6 @@ import {
   SwiperChild,
 } from "./HomeStyle.styled";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import SlickImg from "../assets/photo/maldive.jpg";
 import SlickImg2 from "../assets/photo/bg.jpg";
 import SlickImg3 from "../assets/photo/packageSam.jpg";
@@ -17,6 +17,7 @@ import Button from "../Components/Button/Button";
 import ButtonOutLined from "../Components/Button/ButtonOutLined";
 import ImagerView from "../Components/Imager/Imager";
 import Client from "../Components/Client/Client";
+import Testimonial from "../Components/Testimonial/Testimonial";
 
 const Home = () => {
   let swiperData = [
@@ -119,6 +120,7 @@ const Home = () => {
       <Carusel />
       <ImagerView />
       <Client />
+      <Testimonial />
     </>
   );
 };
