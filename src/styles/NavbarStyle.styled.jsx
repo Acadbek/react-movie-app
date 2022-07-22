@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
 export const WrapperTopNavbar = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
-
   .navbarPhone {
     display: flex;
     align-items: center;
     gap: 10px;
+  }
+
+  .phoneIcon {
+    color: #fff;
   }
 
   .navbarPhoneDiv p:nth-child(1) {
@@ -32,6 +36,10 @@ export const WrapperTopNavbar = styled.div`
     background: #3a78c9;
   }
 
+  .navClock {
+    color: #fff;
+  }
+
   .navbarLogo {
     width: 180px;
     transition: all 0.4s ease;
@@ -46,15 +54,22 @@ export const WrapperTopNavbar = styled.div`
     font-size: 16px;
   }
 `;
+
+export const BottomNavbar = styled.div``;
 export const WrapperBottomNavbar = styled.div`
+  /* background-color: transparent; */
   font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
+  position: sticky;
+  top: 100px;
+  left: 0;
 `;
 
 export const SocialMediaIcons = styled.div`
+  color: #fff;
   ul {
     display: flex;
     align-items: center;
@@ -70,6 +85,10 @@ export const SocialMediaIcons = styled.div`
     border: 1px solid rgba(167, 167, 167, 0.5);
     padding: 10px;
     border-radius: 100%;
+    transition: all 0.3s ease;
+  }
+  ul li:hover {
+    border: 1px solid #174b90;
   }
 `;
 
@@ -80,7 +99,7 @@ export const NavbarLisItems = styled.div`
       margin: 0 20px;
       color: #fff;
       font-size: 16px;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 1.3;
       position: relative;
       text-transform: uppercase;

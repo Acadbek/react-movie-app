@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { FaGlobe } from "react-icons/fa";
+import { IoMdArrowDropdown } from "react-icons/io";
 import "./style.css";
 
 function DropDowner() {
@@ -16,8 +18,13 @@ function DropDowner() {
   return (
     <div className="container">
       <div className={`dropdown`}>
-        <button onClick={handleDropdownClick} className="dropdown-btn">
-          {dropdownValue === "" ? "EN" : dropdownValue}
+        <button
+          onClick={handleDropdownClick}
+          className="dropdown_btn"
+          style={{ display: "flex", alignItems: "center", gap: "10px" }}
+        >
+          <FaGlobe /> {dropdownValue === "" ? "EN" : dropdownValue}{" "}
+          <IoMdArrowDropdown />
         </button>
         <div
           className={`dropdown-items ${

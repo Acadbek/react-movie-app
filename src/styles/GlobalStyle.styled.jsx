@@ -12,6 +12,7 @@ export const WrapperNavbar = styled.div`
   position: absolute;
   display: block;
   width: 100%;
+  z-index: 999;
 `;
 
 export const TopNavbar = styled.div`

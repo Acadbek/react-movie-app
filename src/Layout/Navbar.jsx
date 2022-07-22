@@ -1,4 +1,8 @@
 import React from "react";
+import { BiPhoneCall } from "react-icons/bi";
+import { AiOutlineClockCircle } from "react-icons/ai";
+import { FaInstagram, FaTelegramPlane } from "react-icons/fa";
+import { GrFacebookOption, } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import DropDowner from "../Components/DropDown/DropDown";
 import {
@@ -22,7 +26,9 @@ const Navbar = () => {
         <GlobalContainer>
           <WrapperTopNavbar>
             <a href="tel:+998-90-531-34-13" className="navbarPhone">
-              <span className="navbarPhoneIcon">P</span>
+              <span className="navbarPhoneIcon">
+                <BiPhoneCall className="phoneIcon" />
+              </span>
               <div className="navbarPhoneDiv">
                 <p>Telefon Raqam:</p>
                 <p>+998-90-531-34-13</p>
@@ -42,7 +48,9 @@ const Navbar = () => {
                   <p>Ish Vaqti</p>
                   <p>8:00-20:00</p>
                 </div>
-                <span className="navbarPhoneIcon">P</span>
+                <span className="navbarPhoneIcon">
+                  <AiOutlineClockCircle className="navClock" />
+                </span>
               </div>
             </div>
           </WrapperTopNavbar>
@@ -55,17 +63,17 @@ const Navbar = () => {
               <ul>
                 <li>
                   <a href="#">
-                    <i>O</i>
+                    <GrFacebookOption />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i>O</i>
+                    <FaInstagram />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i>O</i>
+                    <FaTelegramPlane />
                   </a>
                 </li>
               </ul>
