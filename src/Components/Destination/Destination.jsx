@@ -1,5 +1,4 @@
 import React from "react";
-import background from "../../assets/photo/card.jpg";
 import ReactStars from "react-rating-stars-component";
 
 const Card = (props) => {
