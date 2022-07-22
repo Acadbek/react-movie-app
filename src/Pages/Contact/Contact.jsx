@@ -1,9 +1,9 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
 import {
   GlobalContainer,
   InnerAndOuterContainer,
 } from "../../styles/GlobalStyle.styled";
-// import Map from "../../Components/Map";
 
 const Contact = () => {
   return (
@@ -15,7 +15,7 @@ const Contact = () => {
       </InnerAndOuterContainer>
       <div className="bg-backgroundColor py-[95px]">
         <GlobalContainer>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-7">
             <div>
               <p className="text-green">Biz bilan aloqa</p>
               <h1 className="text-[#fff] text-[30px] font-bold">
@@ -96,8 +96,60 @@ const Contact = () => {
                   </svg>
                 </a>
               </div>
+              <iframe
+                className="w-full md:h-[350px] h-[200px] md:rounded-3xl rounded-lg border-none mt-[30px]"
+                title="This is a unique title"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11988.36848973895!2d69.22814145000001!3d41.3068595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1658514867575!5m2!1sen!2s"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
-            <div>as</div>
+            <div>
+              <div className="bg-green pt-10 pb-5 md:rounded-3xl rounded-lg md:px-5 px-3">
+                <form className="flex flex-col">
+                  <label className="text-white text-[18px] mb-1" htmlFor="">
+                    Ismingiz
+                  </label>
+                  <input
+                    className="h-12 rounded-3xl pl-4 outline-none"
+                    maxLength={100}
+                    required
+                    type="text"
+                    placeholder="Enter your name"
+                  />
+                  <label
+                    className="text-white text-[18px] mt-[20px] mb-1"
+                    htmlFor=""
+                  >
+                    Telefon Raqam
+                  </label>
+                  <input
+                    className="h-12 rounded-3xl pl-4 outline-none"
+                    maxLength={100}
+                    required
+                    type="email"
+                    placeholder="Enter your number"
+                  />
+                  <label
+                    className="text-white text-[18px] mt-[20px] mb-1"
+                    htmlFor=""
+                  >
+                    Xabar matni
+                  </label>
+                  <textarea
+                    required
+                    className="rounded-3xl md:h-[257px] h-[100px] pl-4 pt-4 outline-none"
+                    maxLength={500}
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                  <button className="border-2 text-white font-bold hover:text-[#e6e4e4] m-auto rounded-3xl border-white py-2 p-1 mt-4 w-40">
+                    Send
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </GlobalContainer>
       </div>
