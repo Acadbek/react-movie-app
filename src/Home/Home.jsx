@@ -1,13 +1,10 @@
 import React from "react";
-import { GlobalContainer } from "../styles/GlobalStyle.styled";
 import {
-  ButtonInner,
-  ButtonOuter,
+  ButtonWrapper,
   Header,
   HomeContainer,
   SliderImgWrapper,
   SwiperChild,
-  WrapperBanner,
 } from "./HomeStyle.styled";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -15,6 +12,10 @@ import "slick-carousel/slick/slick-theme.css";
 import SlickImg from "../assets/photo/maldive.jpg";
 import SlickImg2 from "../assets/photo/bg.jpg";
 import SlickImg3 from "../assets/photo/packageSam.jpg";
+import Carusel from "../Components/Carusel/Carusel";
+import Button from "../Components/Button/Button";
+import ButtonOutLined from "../Components/Button/ButtonOutLined";
+import ImagerView from "../Components/Imager/Imager";
 
 const Home = () => {
   let swiperData = [
@@ -48,7 +49,6 @@ const Home = () => {
         style={{
           ...style,
           display: "block",
-          background: "red",
           position: "absolute",
           top: "50%",
           left: "95%",
@@ -67,7 +67,6 @@ const Home = () => {
         style={{
           ...style,
           display: "block",
-          background: "green",
           position: "absolute",
           top: "50%",
           left: "5%",
@@ -89,30 +88,33 @@ const Home = () => {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <HomeContainer>
-      <Header>
-        <Slider {...settings}>
-          {swiperData.map((val, inex) => (
-            <SliderImgWrapper>
-              <img src={val.img} alt="" />
-              <div className="overLay"></div>
-              <SwiperChild>
-                <h1>{val.title}</h1>
-                <p>{val.paragraph}</p>
-                <div>
-                  <ButtonInner>
-                    <button>Chet elga sayohat</button>
-                  </ButtonInner>
-                  <ButtonOuter>
-                    <button>Ichki sayohat</button>
-                  </ButtonOuter>
-                </div>
-              </SwiperChild>
-            </SliderImgWrapper>
-          ))}
-        </Slider>
-      </Header>
-    </HomeContainer>
+    <>
+      <HomeContainer>
+        <Header>
+          <Slider {...settings}>
+            {swiperData.map((val, inex) => (
+              <SliderImgWrapper>
+                <img src={val.img} alt="" />
+                <div className="overLay"></div>
+                <SwiperChild>
+                  <h1>{val.title}</h1>
+                  <p>{val.paragraph}</p>
+                  <div className="btnWrapper">
+                    <Button>Chet elga sayohat</Button>
+                    <ButtonOutLined>Ichki sayohat</ButtonOutLined>
+                  </div>
+                </SwiperChild>
+              </SliderImgWrapper>
+            ))}
+          </Slider>
+        </Header>
+      </HomeContainer>
+      <ButtonWrapper>
+        <Button>BARCHASINI KO'RISH</Button>
+      </ButtonWrapper>
+      <Carusel />
+      <ImagerView />
+    </>
   );
 };
 

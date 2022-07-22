@@ -33,6 +33,20 @@ export const SwiperChild = styled.div`
   top: 60%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+  .btnWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .secondBtn {
+    border: 2px solid #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+    background-color: transparent;
+  }
+
   h1 {
     color: #fff;
     font-size: 70px;
@@ -51,43 +65,7 @@ export const SwiperChild = styled.div`
   }
 `;
 
-export const ButtonInner = styled.button`
-  button {
-    background-color: #3a78c9;
-    border: none;
-    color: #ffffff;
-    display: inline-block;
-    font-size: 16px;
-    line-height: 1.1;
-    padding: 17px 30px;
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
-    border-radius: 25px;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
-  }
-  button:hover {
-    background-color: #174b90;
-  }
-`;
-
-export const ButtonOuter = styled.button`
-  button {
-    margin: 10px;
-    border-radius: 25px;
-    padding: 15px 30px;
-    border: 2px solid #fff;
-    transition: background-color 0.3s, border-color 0.3s;
-    font-size: 16px;
-    line-height: 1.1;
-    font-weight: 500;
-    text-transform: uppercase;
-    background-color: transparent;
-    color: #fff;
-  }
-
-  button:hover {
-    border-color: #174b90;
-    background: #174b90;
-  }
+export const ButtonWrapper = styled.div`
+  text-align: center;
+  margin: 50px 0;
 `;
