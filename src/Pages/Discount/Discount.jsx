@@ -3,7 +3,7 @@ import {
   GlobalContainer,
   InnerAndOuterContainer,
 } from "../../styles/GlobalStyle.styled";
-import PackageCard from "../../Components/Package/Package";
+import PackageCard from "../../Components/package/Package";
 import img from "../../assets/photo/sydney.jpg";
 
 const Discount = () => {

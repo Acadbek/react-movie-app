@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import ImageViewer from "react-simple-image-viewer";
 import { GalleryContainer } from "./ImagerStyle";
-import { GlobalContainer } from "../../styles/GlobalStyle.styled";
+import { GlobalContainer, TextWrap } from "../../styles/GlobalStyle.styled";
 
 function ImagerView() {
   const [currentImage, setCurrentImage] = useState(0);

@@ -1,32 +1,7 @@
 import styled from "styled-components";
 
 export const TestimonialContainer = styled.div`
-  text-align: center;
-  h6 {
-    color: #3a78c9;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
 
-  h2 {
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-size: 40px;
-    font-weight: 800;
-    margin: 0 0 15px;
-    line-height: 1.2;
-    color: #223645;
-  }
-
-  p {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    color: #626672;
-    max-width: 750px;
-    margin: 0 auto;
-  }
 `;
 
 export const CaruselWrapper = styled.div`

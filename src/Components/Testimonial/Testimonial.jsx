@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { AiTwotoneStar } from "react-icons/ai";
 import { FaQuoteLeft } from "react-icons/fa";
-import { GlobalContainer } from "../../styles/GlobalStyle.styled";
+import { GlobalContainer, TextWrap } from "../../styles/GlobalStyle.styled";
 
 import {
   CaruselCard,
@@ -62,13 +62,15 @@ const Testimonial = () => {
     <section>
       <GlobalContainer>
         <TestimonialContainer>
-          <h6>Sayohatchining guvohnomasi</h6>
-          <h2>MIJOZLAR SHARXLARI</h2>
-          <p>
-            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec
-            nemo, rutrum. Vestibulum cumque laudantium. Sit ornare mollitia
-            tenetur, aptent.
-          </p>
+          <TextWrap>
+            <h6>Sayohatchining guvohnomasi</h6>
+            <h2>MIJOZLAR SHARXLARI</h2>
+            <p>
+              Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec
+              nemo, rutrum. Vestibulum cumque laudantium. Sit ornare mollitia
+              tenetur, aptent.
+            </p>
+          </TextWrap>
           <CaruselWrapper>
             <Slider {...settings}>
               {caruselData.map((val, id) => (
