@@ -16,6 +16,7 @@ import Carusel from "../Components/Carusel/Carusel";
 import Button from "../Components/Button/Button";
 import ButtonOutLined from "../Components/Button/ButtonOutLined";
 import ImagerView from "../Components/Imager/Imager";
+import Client from "../Components/Client/Client";
 
 const Home = () => {
   let swiperData = [
@@ -84,6 +85,9 @@ const Home = () => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 3000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
@@ -114,6 +118,7 @@ const Home = () => {
       </ButtonWrapper>
       <Carusel />
       <ImagerView />
+      <Client />
     </>
   );
 };

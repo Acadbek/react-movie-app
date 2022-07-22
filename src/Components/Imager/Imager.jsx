@@ -9,7 +9,10 @@ function ImagerView() {
   const images = [
     "http://www.xondoppitravel.com/admin/files/image/Summer-in-Sunny-Dubai-00.jpg    ",
     "http://www.xondoppitravel.com/admin/files/image/4ae41f27fc1b0d7ec149414ec97b13ad.jpg",
-    "	http://www.xondoppitravel.com/admin/files/image/840156cdd5d63fb0b2c838997e7eef3b.jpg ",
+    "http://www.xondoppitravel.com/admin/files/image/Summer-in-Sunny-Dubai-00.jpg    ",
+    "http://www.xondoppitravel.com/admin/files/image/4ae41f27fc1b0d7ec149414ec97b13ad.jpg",
+    "http://www.xondoppitravel.com/admin/files/image/Summer-in-Sunny-Dubai-00.jpg    ",
+    "http://www.xondoppitravel.com/admin/files/image/4ae41f27fc1b0d7ec149414ec97b13ad.jpg",
   ];
 
   const openImageViewer = useCallback((index) => {
