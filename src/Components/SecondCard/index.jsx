@@ -19,21 +19,17 @@ const SecondCard = (props) => {
         <h1 className="text-[#1e635c] text-[25px] font-extrabold">
           {props.title}
         </h1>
-        <p className="mt-4 text-[#626672] font-medium">
-          {props.description}
-        </p>
+        <p className="mt-4 text-[#626672] font-medium">{props.description}</p>
         <p className="shadow-lg mt-7 text-[13px] bg-white px-3 py-1 rounded-full text-[#535252]">
           {" "}
           {props.day} | {props.location}
         </p>
       </div>
-      <div className="col-span-3 rounded-tr-3xl px-2 text-center rounded-br-3xl flex items-center justify-center flex-col bg-[#00a795]">
+      <div className="col-span-3 rounded-tr-3xl px-2 text-center rounded-br-3xl flex items-center justify-center flex-col bg-green">
         <ReactStars size={22} onChange={ratingChanged} />
-        <p className="text-white text-[20px] font-bold mt-2">
-          {props.price}
-        </p>
-        <p className="text-white text-sm font-bold">/ {props.forHowMany}</p>
-        <button className="mt-4 border-2 border-white font-semibold px-4 py-2 rounded-3xl hover:text-[#e7e3e3] text-white">
+        <p className="text-[#fff] text-[20px] font-bold mt-2">{props.price}</p>
+        <p className="text-[#fff] text-sm font-bold">/ {props.forHowMany}</p>
+        <button className="mt-4 border-2 border-[#fff] font-semibold px-4 py-2 rounded-3xl hover:text-[#e7e3e3] text-[#fff]">
           Buyurtma Berish
         </button>
       </div>
