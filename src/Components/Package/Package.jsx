@@ -134,7 +134,7 @@ const PackageCard = (props) => {
           {props.title}
         </p>
         <p className="text-[15px] text-[#626672] break-words mt-3">
-					{props.desc}
+          {props.desc}
         </p>
         <p className="text-[#3A78C9] font-bold text-[22px] mt-3">
           {props.price}
