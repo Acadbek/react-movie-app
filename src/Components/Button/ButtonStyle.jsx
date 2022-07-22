@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ButtonInner = styled.button`
   button {
-    background-color: #3a78c9;
+    background-color: #00a795;
     border: none;
     color: #ffffff;
     display: inline-block;
@@ -16,6 +16,6 @@ export const ButtonInner = styled.button`
     transition: background-color 0.3s;
   }
   button:hover {
-    background-color: #174b90;
+    color: #b3e5df;
   }
 `;

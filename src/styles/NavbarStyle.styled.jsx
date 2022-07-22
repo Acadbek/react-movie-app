@@ -39,7 +39,7 @@ export const WrapperTopNavbar = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #3a78c9;
+    background: #00A795;
   }
 
   .navClock {
@@ -130,12 +130,12 @@ export const Button = styled.button`
     color: #fff;
     width: 90px;
     height: 38px;
-    background: #3a78c9;
+    background: #00A795;
     border-radius: 25px;
   }
 
   button:hover {
     transition: background-color 0.3s;
-    background-color: #174b90;
+    
   }
 `;

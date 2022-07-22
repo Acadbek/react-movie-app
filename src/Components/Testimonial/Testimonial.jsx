@@ -1,11 +1,14 @@
 import React from "react";
 import Slider from "react-slick";
+import { AiTwotoneStar } from "react-icons/ai";
+import { FaQuoteLeft } from "react-icons/fa";
 import { GlobalContainer } from "../../styles/GlobalStyle.styled";
 
 import {
   CaruselCard,
   CaruselItem,
   CaruselWrapper,
+  Quote,
   TestimonialContainer,
 } from "./TestimonialStyle";
 
@@ -13,6 +16,7 @@ const Testimonial = () => {
   let caruselData = [
     {
       id: 1,
+      starAmount: 4,
       paragraph:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       avatarName: "Otabek Abdulhamid",
@@ -20,6 +24,7 @@ const Testimonial = () => {
     },
     {
       id: 2,
+      starAmount: 3,
       paragraph:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       avatarName: "Temur Ismon",
@@ -27,6 +32,7 @@ const Testimonial = () => {
     },
     {
       id: 3,
+      starAmount: 5,
       paragraph:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       avatarName: "Nurbek Abdulhamid",
@@ -34,12 +40,14 @@ const Testimonial = () => {
     },
     {
       id: 4,
+      starAmount: 2,
       paragraph:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       avatarName: "Sanjar Ismon",
       status: "Sayohatchilar",
     },
   ];
+
   const settings = {
     dots: true,
     infinite: true,
@@ -63,25 +71,39 @@ const Testimonial = () => {
           </p>
           <CaruselWrapper>
             <Slider {...settings}>
-                {caruselData.map((val, id) => (
-                  <CaruselItem>
-                    <div className="rating_star">* * * * *</div>
-                    <p>{val.paragraph}</p>
-                    <div className="avatar_wrap">
-                      <div className="avatar_img_div">
-                        <img
-                          src="http://www.xondoppitravel.com/admin/files/image/i%20(1).webp"
-                          alt=""
-                        />
-                      </div>
-                      <div className="avatar_name_div">
-                        <h5>{val.avatarName}</h5>
-                        <span>{val.status}</span>
-                      </div>
-                      <div></div>
+              {caruselData.map((val, id) => (
+                <CaruselItem>
+                  <div className="rating_star">
+                    <ul>
+                      {[...Array(val.starAmount || 5)].map((star) => {
+                        return (
+                          <li>
+                            <AiTwotoneStar />
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                  <p>{val.paragraph}</p>
+                  <div className="avatar_wrap">
+                    <div className="avatar_img_div">
+                      <img
+                        src="http://www.xondoppitravel.com/admin/files/image/i%20(1).webp"
+                        alt=""
+                      />
                     </div>
-                  </CaruselItem>
-                ))}
+                    <div className="avatar_name_div">
+                      <h5>{val.avatarName}</h5>
+                      <span>{val.status}</span>
+                    </div>
+                    <Quote>
+                      <i>
+                        <FaQuoteLeft />
+                      </i>
+                    </Quote>
+                  </div>
+                </CaruselItem>
+              ))}
             </Slider>
           </CaruselWrapper>
         </TestimonialContainer>
