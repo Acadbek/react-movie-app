@@ -10,6 +10,7 @@ import img2 from "../../assets/photo/card.jpg";
 const InnerTurizm = () => {
   const data = [
     {
+      id: 1,
       img: img,
       title: "Samarqand qadimiy joylardan biri",
       description: " Oʻzbekiston Respublikasidagi qadimiy shahar.",
@@ -18,24 +19,26 @@ const InnerTurizm = () => {
       price: "10 890 000 so'm ",
       forHowMany: "Har biriga",
     },
-    {
-      img: img2,
-      title: "Farg'na qadimiy joylardan biri",
-      description: " Oʻzbekiston Respublikasidagi qadimiy shahar.",
-      day: "20 kun",
-      location: "Farg'ona",
-      price: "20 890 000 so'm ",
-      forHowMany: "Har biriga",
-    },
-    {
-      img: img,
-      title: "Buhoro qadimiy joylardan biri",
-      description: " Oʻzbekiston Respublikasidagi qadimiy shahar.",
-      day: "10 kun",
-      location: "Buhoro",
-      price: "10 890 000 so'm ",
-      forHowMany: "Har biriga",
-    },
+    // {
+    //   id: 2,
+    //   img: img2,
+    //   title: "Farg'na qadimiy joylardan biri",
+    //   description: " Oʻzbekiston Respublikasidagi qadimiy shahar.",
+    //   day: "20 kun",
+    //   location: "Farg'ona",
+    //   price: "20 890 000 so'm ",
+    //   forHowMany: "Har biriga",
+    // },
+    // {
+    //   id: 3,
+    //   img: img,
+    //   title: "Buhoro qadimiy joylardan biri",
+    //   description: " Oʻzbekiston Respublikasidagi qadimiy shahar.",
+    //   day: "10 kun",
+    //   location: "Buhoro",
+    //   price: "10 890 000 so'm ",
+    //   forHowMany: "Har biriga",
+    // },
   ];
 
   return (
@@ -49,6 +52,7 @@ const InnerTurizm = () => {
         <div className="py-[95px]">
           {data.map((item) => (
             <SecondCard
+              key={item.id}
               img={item.img}
               title={item.title}
               description={item.description}
