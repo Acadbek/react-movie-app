@@ -1,23 +1,30 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
+  position: relative;
   height: 100vh;
 `;
 
 export const Header = styled.div`
-  z-index: -5;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
 `;
 
 export const SliderImgWrapper = styled.div`
   position: relative;
-  background: linear-gradient(
-    90deg,
-    rgba(197, 19, 19, 0.6),
-    rgba(236, 26, 26, 0.61)
-  );
   img {
     width: 100vw;
     height: 100vh;
+  }
+
+  .overLay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 `;
 export const SwiperChild = styled.div`
@@ -26,7 +33,6 @@ export const SwiperChild = styled.div`
   top: 60%;
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 999;
   h1 {
     color: #fff;
     font-size: 70px;
@@ -64,6 +70,7 @@ export const ButtonInner = styled.button`
     background-color: #174b90;
   }
 `;
+
 export const ButtonOuter = styled.button`
   button {
     margin: 10px;

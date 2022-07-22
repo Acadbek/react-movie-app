@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const WrapperTopNavbar = styled.div`
-  position: relative;
   display: flex;
   justify-content: space-between;
+  
   .navbarPhone {
     display: flex;
     align-items: center;
@@ -63,9 +63,7 @@ export const WrapperBottomNavbar = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
-  position: sticky;
-  top: 100px;
-  left: 0;
+
 `;
 
 export const SocialMediaIcons = styled.div`

@@ -7,6 +7,7 @@ import {
   HomeContainer,
   SliderImgWrapper,
   SwiperChild,
+  WrapperBanner,
 } from "./HomeStyle.styled";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -94,6 +95,7 @@ const Home = () => {
           {swiperData.map((val, inex) => (
             <SliderImgWrapper>
               <img src={val.img} alt="" />
+              <div className="overLay"></div>
               <SwiperChild>
                 <h1>{val.title}</h1>
                 <p>{val.paragraph}</p>
